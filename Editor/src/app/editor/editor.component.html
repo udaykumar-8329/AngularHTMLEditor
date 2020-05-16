@@ -1,0 +1,20 @@
+<div style="width: 100%;">
+<div class="right">
+  <button type="button" (click)="execute()" mat-raised-button color="primary">RUN</button>
+</div>
+  <mat-tab-group mat-stretch-tabs>
+    <mat-tab label="HTML">
+      <textarea rows="10" placeholder="Type your HTML Code here..." [(ngModel)] = "html" >{{ html }}</textarea>
+      <!-- (change)="doTextareaValueChange($event)" -->
+    </mat-tab>
+    <mat-tab label="CSS">
+      <textarea rows="23" placeholder="Type your CSS Code here..." [(ngModel)] = "css"> {{ css }} </textarea>
+    </mat-tab>
+    <mat-tab label="JS">
+      <textarea rows="23" placeholder="Type your JS Code here..." [(ngModel)] = "js"> {{ js }} </textarea>
+    </mat-tab>
+  </mat-tab-group>
+  <div id="output" style="border: thick solid #0000FF; height:40%">
+
+  </div>
+</div>
